@@ -8,28 +8,27 @@ body,h1 ,h2 ,p ,ul, li, a{
 .cabecalho {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-.header {
-  margin-top: 1em;
-}
+
 .title {
   font-family: 'Just Another Hand', cursive;
   font-size: 6rem;
 }
 .mode {
   background: #000000;
-  border-radius: 31.25rem;
-  height: 2rem;
-  width: 10rem;
-  box-shadow: inset 0px 0.33px 0px #C6C6C8;
-}
-header .darkmode {
-  color: #fff;
   display: flex;
-  text-align: end;
-  height: 21px;
-  left: 16px;
-  top: calc(50% - 21px/2 - 0.5px);
+  border-radius: 31.25rem;
+  box-shadow: inset 0px 0.33px 0px #C6C6C8;
+  height: 3em;
+  width: 12em;
+}
+.darkmode {
+  color: #fff;
+  padding: 15px 20px 0 25px;
+  text-align: center;
 }
 
 /* Butoes */
@@ -52,7 +51,7 @@ header .darkmode {
   border-radius: calc(var(--button-height) / 2);
   position: relative;
   transition: 0.3s all ease-in-out;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-right: 10px;
  }
  
