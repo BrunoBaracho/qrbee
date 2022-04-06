@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>QrBee</title>
 </head>
 
@@ -18,32 +18,47 @@
       <div class="mode">
         <p class="darkmode">DarkMode</p>
         <label class="switch">
-          <input type="checkbox">
+          <input type="checkbox" id="modoescuro">
           <span class="slider"></span>
         </label>
       </div>
     </div>
   </header>
-  <section class="container">
 
-      <img class="tamanho" src="./img/pngtree-bee-animal-icon-honey-flying-bee-insect-bugs-insects-and-arachnids-image_317533-removebg-preview 1.png" alt="">
-    
+  <section class="container">
+    <div class="img-main">
+      <img class="tamanho" id="abelha" src="./img/abelhapreta.png">
+    </div>
     <div class="gen">
       <input class="linkgenurl" type="text" placeholder="Coloque seu url aqui">
     </div>
-    <div class="buttom"><button>Gerar QR Code</button></div>
+    <div class="button">
+      <button>Gerar QR Code</button>
+    </div>
   </section>
   <footer class="rodape">
     <div class="img-footer">
-      <p><img src="./img/LinkedIn - Original.png" alt=""></p>
+      <a href="https://www.linkedin.com/in/arthurspk/" target="_blank">
+        <img id="linkedin" src="./img/LinkedIn-Original.png">
+      </a>
     </div>
     <div class="img-footer">
-      <p><img src="./img/Github - Original.png" alt=""></p>
+      <a href="https://github.com/BrunoBaracho/qrbee" target="_blank">
+        <img id="github" src="./img/Github-Original.png">
+      </a>
     </div>
     <div class="img-footer">
-      <p><img src="./img/Discord - Negative.png" alt=""></p>
+      <a href="https://discord.gg/NbMQUPjHz7" target="_blank">
+        <img id="discord" src="./img/Discord-Negative.png">
+      </a>
     </div>
   </footer>
+  <div class="make">
+    <div class="makewith">
+      <p>Feito por <a href="https://github.com/arthurspk" target="_blank">Arthur Coutinho </a> e <a href="https://github.com/brunobaracho" target="_blank"> Bruno Baracho </a></p>
+    </div>
+  </div>
+  <script src="./js/scrip.js"></script>
 </body>
 
 </html>

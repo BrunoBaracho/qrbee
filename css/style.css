@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Just+Another+Hand&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --amarelo-vivo: hsla(61, 100%, 50%);
+  --preto: hsla(0, 0%, 0%);
+  --grey-shadow: hsla(240, 1%, 78%);
+  --grey-more-shadow: rgb(148, 148, 148);
+  --back-ground-color: #fafafa;
+  --display-color: #fafada;
+  --white-p: rgb(255, 255, 255);
+}
+
+.modoescuro:root {
+  --back-ground-color: #000;
+  --white-p: rgb(0, 0, 0);
+  --preto: #fafafa;
+}
+
+body {
+  background: var(--back-ground-color);
+}
+/* Cabeçalho */
+.cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.title {
+  font-family: "Just Another Hand", cursive;
+  font-size: 6rem;
+  color: var(--amarelo-vivo);
+}
+.mode {
+  background: var(--preto);
+  display: flex;
+  border-radius: 31.25rem;
+  box-shadow: inset 0px 0.33px 0px var(--grey-shadow);
+  height: 3em;
+  width: 12em;
+}
+.darkmode {
+  color: var(--white-p);
+  padding: 15px 20px 0 25px;
+  text-align: center;
+}
+/* Container */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 80px;
+  /* background: red; */
+}
+
+.tamanho {
+  width: 151px;
+  height: 151px;
+}
+
+.linkgenurl {
+  display: flex;
+  border: 5px solid var(--amarelo-vivo);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 347rem;
+  margin-top: 12px;
+  width: 35rem;
+  min-width: auto;
+  height: 2.75rem;
+}
+
+.linkgenurl:focus {
+  outline: 0;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.button {
+  margin-top: 1rem;
+}
+
+/* Footer */
+.rodape {
+  display: flex;
+  justify-content: center;
+  margin-top: 7%;
+  margin-bottom: 0;
+}
+
+.img-footer {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+img {
+  height: 38px;
+}
+
+/* Feito por --  */
+.make {
+  display: flex;
+  justify-content: center;
+}
+.makewith {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  font-size: 0.75rem;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.makewith p {
+  color: var(--grey-more-shadow);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 10px;
+}
+
+.makewith a {
+  text-decoration: none;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--grey-shadow);
+}
+
+.makewith a:hover {
+  text-decoration: none;
+  color: var(--amarelo-vivo);
+}
+
+/* Butoes */
+.switch {
+  --button-width: 51px;
+  --button-height: 1.5em;
+  --toggle-diameter: 1.5em;
+  --button-toggle-offset: calc(
+    (var(--button-height) - var(--toggle-diameter)) / 2
+  );
+  --toggle-shadow-offset: 10px;
+  --toggle-wider: 3em;
+  --color-grey: #b2b2b2;
+  --color-green: #faff00;
+}
+
+.slider {
+  display: inline-block;
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: var(--color-grey);
+  border-radius: calc(var(--button-height) / 2);
+  position: relative;
+  transition: 0.3s all ease-in-out;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: 1px solid rgba(224, 224, 224, 0.527);
+}
+
+.slider::after {
+  content: "";
+  display: inline-block;
+  width: var(--toggle-diameter);
+  height: var(--toggle-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle-diameter) / 2);
+  position: absolute;
+  top: var(--button-toggle-offset);
+  transform: translateX(var(--button-toggle-offset));
+  box-shadow: var(--toggle-shadow-offset) 0
+    calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+  transition: 0.3s all ease-in-out;
+}
+
+.switch input[type="checkbox"]:checked + .slider {
+  background-color: var(--color-green);
+}
+
+.switch input[type="checkbox"]:checked + .slider::after {
+  transform: translateX(
+    calc(
+      var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)
+    )
+  );
+  box-shadow: calc(var(--toggle-shadow-offset) * -1) 0
+    calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+}
+
+.switch input[type="checkbox"] {
+  display: none;
+}
+
+.switch input[type="checkbox"]:active + .slider::after {
+  width: var(--toggle-wider);
+}
+
+.switch input[type="checkbox"]:checked:active + .slider::after {
+  transform: translateX(
+    calc(
+      var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)
+    )
+  );
+}
+
+button {
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
