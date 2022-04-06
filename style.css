@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Just+Another+Hand&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&display=swap');
+
+body,h1 ,h2 ,p ,ul, li, a{
+  margin: 0px;
+  padding: 0px;
+}
+/* Cabeçalho */
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+.header {
+  margin-top: 1em;
+}
+.title {
+  font-family: 'Just Another Hand', cursive;
+  font-size: 6rem;
+}
+.mode {
+  background: #000000;
+  border-radius: 31.25rem;
+  height: 2rem;
+  width: 10rem;
+  box-shadow: inset 0px 0.33px 0px #C6C6C8;
+}
+header .darkmode {
+  color: #fff;
+  display: flex;
+  text-align: end;
+  height: 21px;
+  left: 16px;
+  top: calc(50% - 21px/2 - 0.5px);
+}
+
+/* Butoes */
+.switch {
+  --button-width: 51px;
+  --button-height: 1.5em;
+  --toggle-diameter: 1.5em;
+  --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+  --toggle-shadow-offset: 10px;
+  --toggle-wider: 3em;
+  --color-grey: #b2b2b2;
+  --color-green: #faff00;
+ }
+ 
+ .slider {
+  display: inline-block;
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: var(--color-grey);
+  border-radius: calc(var(--button-height) / 2);
+  position: relative;
+  transition: 0.3s all ease-in-out;
+  margin-top: 5px;
+  margin-right: 10px;
+ }
+ 
+ .slider::after {
+  content: "";
+  display: inline-block;
+  width: var(--toggle-diameter);
+  height: var(--toggle-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle-diameter) / 2);
+  position: absolute;
+  top: var(--button-toggle-offset);
+  transform: translateX(var(--button-toggle-offset));
+  box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+  transition: 0.3s all ease-in-out;
+ }
+ 
+ .switch input[type="checkbox"]:checked + .slider {
+  background-color: var(--color-green);
+ }
+ 
+ .switch input[type="checkbox"]:checked + .slider::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+  box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+ }
+ 
+ .switch input[type="checkbox"] {
+  display: none;
+ }
+ 
+ .switch input[type="checkbox"]:active + .slider::after {
+  width: var(--toggle-wider);
+ }
+ 
+ .switch input[type="checkbox"]:checked:active + .slider::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+ }
+
+ button {
+  background: #FBCA1F;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+ }
+ 
+ button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+ }
+ 
+ button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+ }
