@@ -16,6 +16,7 @@ body,h1 ,h2 ,p ,ul, li, a{
 .title {
   font-family: 'Just Another Hand', cursive;
   font-size: 6rem;
+  color:#FAFF00;
 }
 .mode {
   background: #000000;
@@ -29,6 +30,37 @@ body,h1 ,h2 ,p ,ul, li, a{
   color: #fff;
   padding: 15px 20px 0 25px;
   text-align: center;
+}
+/* Container */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 150px;
+  background: red;
+}
+
+
+.linkgenurl{
+  display: flex;
+  border: 5px solid #FAFF00;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5555px;
+  margin-top: 12px;
+}
+
+.tamanho {
+  width: 151px;
+  height: 151px;
+}
+
+/* Footer */
+.rodape {
+display: flex;
+justify-content: center;
 }
 
 /* Butoes */
